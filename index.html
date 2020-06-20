@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: lightgray">
+
+  <div class="container-fluid" >
+
+    <div class="row">
+        <div class="col text-center jumbotron" style="padding: 30px">
+            <h3 style="color:#b21f2d">Belly Button Biodiversity Dashboard</h3>
+            <p style="color: #b21f2d">Use the interactive charts below to explore the dataset</p>
+          </div>
+    </div>
+
+    <div class="row" style="margin-left: 10px">
+
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body text-lg-right">
+                <h6>Test Subject ID No.:
+                <select id="selDataset"></select>
+                </h6>
+              </div>
+            </div>
+
+            <div class="card">
+              <h5 class="card-header text-center">Demographic Info</h5>
+
+              <div class="card-body">
+
+                <div class="table-responsive">
+              <table border="0" class="table dataframe table-small">
+                <thead>
+                  <tr style="text-align: left;">
+                    <th>Parameter</th>
+                   <th>Value</th>
+                 </tr>
+                 </thead>
+                <tbody id="sample-metadata">
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+          <div class="col-md-5">
+
+            <div class="card" style="padding-bottom: 60px">
+              <div class="card-body text-lg-right">
+                <div id="bar"></div>
+              </div>
+            </div>
+
+
+            </div>
+
+          <div class="col-md-3" >
+
+            <div class="card">
+
+                <div id="gauge"></div>
+
+            </div>
+
+
+          </div>
+
+    </div>
+
+
+          <div class="row" style="margin-left: 25px;margin-top: 20px;margin-bottom: 20px">
+              <div class="card" style="padding-left: 125px">
+                  <div class="card-body">
+                      <div id="bubble"></div>
+                  </div>
+              </div>
+          </div>
+
+
+
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script type="application/json" src="data/samples.json"></script>
+  <script src="./static/js/app.js"></script>
+
+</body>
+
+</html>
