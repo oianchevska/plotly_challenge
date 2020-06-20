@@ -1,5 +1,8 @@
 
 var barColors1 = ["#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff", "#EE6868"];
+
+var bubbleColors = ["#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff", "#EE6868","#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff", "#EE6868","#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff", "#EE6868","#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff", "#EE6868","#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff", "#EE6868","#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff", "#EE6868"];
+
 var gaugeColors = ["#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff","rgba(255, 255, 255, 0)"]
 
 
@@ -10,7 +13,7 @@ function build() {
     var dataset = dropdownMenu.property("value");
 
     // filtering subject id
-    d3.json("static/js/samples.json").then(function (data) {
+    d3.json("./data/samples.json").then(function (data) {
 
         var metadata=data.metadata.filter(function (rec) {
                 return rec.id==dataset;
@@ -80,7 +83,7 @@ function buidСhart(samplesData) {
         text: otu_labels,
         mode: 'markers',
         marker: {
-            color: barColors1,
+            color: bubbleColors,
             size: sample_values,
             line: {
                 color: 'rgb(10, 0, 7)',
@@ -205,7 +208,7 @@ function buidGauge(metadata) {
 function init () {
 
     console.log("init");
-    d3.json("static/js/samples.json").then(function (data) {
+    d3.json("./data/samples.json").then(function (data) {
         var names = data.names;
         var dropdownMenu = d3.select("#selDataset");
 
