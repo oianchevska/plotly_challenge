@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
-  <link rel="stylesheet" href="./static/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
 </head>
 
 <body style="background-color: lightgray">
@@ -20,9 +20,9 @@
           </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="margin-left: 10px">
 
-          <div class="col-md-2" style="margin-left: 30px">
+          <div class="col-md-3">
             <div class="card">
               <div class="card-body text-lg-right">
                 <h6>Test Subject ID No.:
@@ -31,10 +31,10 @@
               </div>
             </div>
 
-            <div class="card" style="margin-top: 10px">
-              <h5 class="card-header">Demographic Info</h5>
+            <div class="card">
+              <h5 class="card-header text-center">Demographic Info</h5>
 
-              <div id="sample-metadata" class="card-body">
+              <div class="card-body">
 
                 <div class="table-responsive">
               <table border="0" class="table dataframe table-small">
@@ -44,15 +44,7 @@
                    <th>Value</th>
                  </tr>
                  </thead>
-                <tbody>
-                <tr>
-                  <td>0</td>
-                  <td>Hobart</td>
-                </tr>
-                <tr>
-                  <td>0</td>
-                  <td>Hobart</td>
-                </tr>
+                <tbody id="sample-metadata">
                 </tbody>
               </table>
             </div>
@@ -64,8 +56,7 @@
 
           <div class="col-md-5">
 
-            <div class="card">
-<!--              <h5 class="card-header text-center">Belly Button Biodiversity</h5>-->
+            <div class="card" style="padding-bottom: 60px">
               <div class="card-body text-lg-right">
                 <div id="bar"></div>
               </div>
@@ -74,7 +65,7 @@
 
             </div>
 
-          <div class="col-md-4">
+          <div class="col-md-3" >
 
             <div class="card">
 
@@ -87,29 +78,26 @@
 
     </div>
 
-    <div class="row" style="padding: 30px">
-      <div class="card">
-        <div class="card-body">
-          <div id="bubble"></div>
-        </div>
-      </div>
-    </div>
+
+          <div class="row" style="margin-left: 25px;margin-top: 20px;margin-bottom: 20px">
+              <div class="card" style="padding-left: 125px">
+                  <div class="card-body">
+                      <div id="bubble"></div>
+                  </div>
+              </div>
+          </div>
+
+
 
 
   </div>
 
 
-
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script type="application/json" src="./static/js/samples.json"></script>
+  <script type="application/json" src="data/samples.json"></script>
   <script src="./static/js/app.js"></script>
-<!--  <script src="./static/js/bonus.js"></script>-->
 
-  
 </body>
 
 </html>
