@@ -1,7 +1,9 @@
 
-var barColors = ["#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#6C8893", "#EE6868"];
-var col = ["#FF33F6","#3D0C3A","#320C3D","#290C3D","#1C0C3D","#370C3D","#CF24A3","#AE5497","#CE1B5A","#990439","#F5B041","#7D3C98","#138D75"]
-
+var barColors1 = ["#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff", "#EE6868"];
+//var col = ["#FF33F6","#3D0C3A","#320C3D","#290C3D","#1C0C3D","#370C3D","#CF24A3","#AE5497","#CE1B5A","#990439","#F5B041","#7D3C98","#138D75"]
+//var barColors = ["#E8F8F5","#D5F5E3","#82E0AA", "#48C9B0","#52BE80","#27AE60","#1E8449","#196F3D","#0B5345","#0E6251"];
+//var barColors = ["#ff794d","#ff794d","#ff6633", "#ff531a","#ff4000","#e63900","#cc3300","#b32d00","#992600","#802000"];
+var gaugeColors = ["#5899DA", "#E8743B", "#19A979", "#ED4A7B", "#945ECF", "#13A4B4", "#525DF4", "#BF399E", "#4dc3ff","rgba(255, 255, 255, 0)"]
 function build() {
 
     console.log("build")
@@ -57,7 +59,7 @@ function buidBar(samplesData) {
                  y: otuStr.slice(0,10).reverse(),
                   text:otu_labels,
                   marker: {
-                 color: barColors,
+                 color: barColors1,
                  line: {
                             color: 'rgb(10, 0, 7)',
                             width: 1
@@ -95,7 +97,7 @@ function buidСhart(samplesData) {
         text: otu_labels,
         mode: 'markers',
         marker: {
-            color: barColors,
+            color: barColors1,
             size: sample_values,
             line: {
                 color: 'rgb(10, 0, 7)',
@@ -106,7 +108,7 @@ function buidСhart(samplesData) {
     var data = [trace1];
 
     var layout = {
-        title: 'Bubble Chart Hover Text',
+        title: '<b>Belly Button Bubble Chart</b>',
         showlegend: false,
         height: 800,
         width: 1400
@@ -176,18 +178,19 @@ function buidGauge(metadata) {
                 textinfo: "text",
                 textposition: "inside",
                 marker: {
-                    colors: [
-                        "rgba(0, 105, 11, .5)",
-                        "rgba(10, 120, 22, .5)",
-                        "rgba(14, 127, 0, .5)",
-                        "rgba(110, 154, 22, .5)",
-                        "rgba(170, 202, 42, .5)",
-                        "rgba(202, 209, 95, .5)",
-                        "rgba(210, 206, 145, .5)",
-                        "rgba(232, 226, 202, .5)",
-                        "rgba(240, 230, 215, .5)",
-                        "rgba(255, 255, 255, 0)"
-                    ]
+                     colors: gaugeColors
+                    //     "rgba(0, 105, 11, .5)",
+                    //     "rgba(10, 120, 22, .5)",
+                    //     "rgba(14, 127, 0, .5)",
+                    //     "rgba(110, 154, 22, .5)",
+                    //     "rgba(170, 202, 42, .5)",
+                    //     "rgba(202, 209, 95, .5)",
+                    //     "rgba(210, 206, 145, .5)",
+                    //     "rgba(232, 226, 202, .5)",
+                    //     "rgba(240, 230, 215, .5)",
+                    //     "rgba(255, 255, 255, 0)"
+                    // ]
+
                 },
                 labels: ["8-9", "7-8", "6-7", "5-6", "4-5", "3-4", "2-3", "1-2", "0-1", ""],
                 hoverinfo: "label",
